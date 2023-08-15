@@ -1,1 +1,21 @@
-TODO: write readme
+The recordings used for the figure "AXI Read Jitter and Peaks" are taken from
+TEST__MemoryReaderDDR__firstAddress=00080010-lastAddress=00080F10-step=00000008-repetitions=00000000-repetitionGap=00000040__run=XXXX_of_1000.ila
+with XXX running from 1 to 1000.
+
+The read/write test is "TEST__TableWriter*.ila
+The read test is TEST__MemoryReader*.ila
+The write test is TEST_MemoryWriter*.ila
+
+
+DDR/OCM refer to the memory type used (which directly corresponds to differen address ranges)
+The address range used for the test ist given by "firstAddress" and "lastAddress".
+"step" is the step width while iterating through the address range.
+
+Repetitions refers to additional repetitions (for example, the whole range is read 5 times). RepetitionGap is the pause between repetitions.
+
+run=X of Y is the id of the individual test run.
+
+
+All tests were performed on a PYNQ-Z1 board running at 77 MHz, while the CPU was running an empty while(1){} loop.
+
+The csv files were directly extracted from the .ila files provided by Xilinx Vivado 2022.2 without any postprocessing.
